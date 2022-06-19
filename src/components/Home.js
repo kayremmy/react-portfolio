@@ -1,13 +1,42 @@
 import React from "react";
-import BlogHome from "./blog/BlogHome";
+import { useState } from "react";
 import Counter from "./counter/Counter";
-import Slider from "./layout/Slider";
-import Testimonial from "./testimonial/Testimonial";
 
 const Home = () => {
+	const name = useState("Kay Remmy");
 	return (
 		<>
-			<Slider />
+			<div
+				id="home"
+				className="intro route bg-image"
+				style={{ backgroundImage: `url(images/four.jpg)` }}
+			>
+				<div className="overlay-itro"></div>
+				<div className="intro-content display-table">
+					<div className="table-cell">
+						<div className="container">
+							<p className="display-6 color-d">Hello, world!</p>
+							<h1 className="intro-title mb-4">{name}</h1>
+							<p className="intro-subtitle">
+								<span className="text-slider-items">
+									CEO DevFolio,Web Developer,Web Designer,Frontend
+									Developer,Graphic Designer
+								</span>
+								<strong className="text-slider"></strong>
+							</p>
+							<p className="pt-3">
+								<a
+									className="btn btn-primary btn js-scroll px-4"
+									href="#about"
+									role="button"
+								>
+									Learn More
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section id="about" className="about-mf sect-pt4 route">
 				<div className="container">
 					<div className="row">
@@ -414,8 +443,194 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<Testimonial />
-			<BlogHome />
+			<div
+				className="testimonials paralax-mf bg-image"
+				style={{ backgroundImage: `url(images/overlay-bg.jpg)` }}
+			>
+				<div className="overlay-mf"></div>
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<div id="testimonial-mf" className="owl-carousel owl-theme">
+								<div className="testimonial-box">
+									<div className="author-test">
+										<img
+											src="images/testimonial-2.jpg"
+											alt=""
+											className="rounded-circle b-shadow-a"
+										/>
+										<span className="author">Xavi Alonso</span>
+									</div>
+									<div className="content-test">
+										<p className="description lead">
+											Curabitur arcu erat, accumsan id imperdiet et, porttitor
+											at sem. Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit.
+										</p>
+										<span className="comit">
+											<i className="fa fa-quote-right"></i>
+										</span>
+									</div>
+								</div>
+								<div className="testimonial-box">
+									<div className="author-test">
+										<img
+											src="images/testimonial-4.jpg"
+											alt=""
+											className="rounded-circle b-shadow-a"
+										/>
+										<span className="author">Marta Socrate</span>
+									</div>
+									<div className="content-test">
+										<p className="description lead">
+											Curabitur arcu erat, accumsan id imperdiet et, porttitor
+											at sem. Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit.
+										</p>
+										<span className="comit">
+											<i className="fa fa-quote-right"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section id="blog" className="blog-mf sect-pt4 route">
+				<div className="container">
+					<div className="row">
+						<div className="col-sm-12">
+							<div className="title-box text-center">
+								<h3 className="title-a">Blog</h3>
+								<p className="subtitle-a">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								</p>
+								<div className="line-mf"></div>
+							</div>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-4">
+							<div className="card card-blog">
+								<div className="card-img">
+									<a href="/BlogDetails">
+										<img src="images/post-1.jpg" alt="" className="img-fluid" />
+									</a>
+								</div>
+								<div className="card-body">
+									<div className="card-category-box">
+										<div className="card-category">
+											<h6 className="category">Travel</h6>
+										</div>
+									</div>
+									<h3 className="card-title">
+										<a href="/BlogDetails">See more ideas about Travel</a>
+									</h3>
+									<p className="card-description">
+										Proin eget tortor risus. Pellentesque in ipsum id orci porta
+										dapibus. Praesent sapien massa, convallis a pellentesque
+										nec, egestas non nisi.
+									</p>
+								</div>
+								<div className="card-footer">
+									<div className="post-author">
+										<a href="/BlogDetails">
+											<img
+												src="images/testimonial-2.jpg"
+												alt=""
+												className="avatar rounded-circle"
+											/>
+											<span className="author">Morgan Freeman</span>
+										</a>
+									</div>
+									<div className="post-date">
+										<span className="ion-ios-clock-outline"></span> 10 min
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div className="card card-blog">
+								<div className="card-img">
+									<a href="/BlogDetails">
+										<img src="images/post-2.jpg" alt="" className="img-fluid" />
+									</a>
+								</div>
+								<div className="card-body">
+									<div className="card-category-box">
+										<div className="card-category">
+											<h6 className="category">Web Design</h6>
+										</div>
+									</div>
+									<h3 className="card-title">
+										<a href="/BlogDetails">See more ideas about Travel</a>
+									</h3>
+									<p className="card-description">
+										Proin eget tortor risus. Pellentesque in ipsum id orci porta
+										dapibus. Praesent sapien massa, convallis a pellentesque
+										nec, egestas non nisi.
+									</p>
+								</div>
+								<div className="card-footer">
+									<div className="post-author">
+										<a href="/BlogDetails">
+											<img
+												src="images/testimonial-2.jpg"
+												alt=""
+												className="avatar rounded-circle"
+											/>
+											<span className="author">Morgan Freeman</span>
+										</a>
+									</div>
+									<div className="post-date">
+										<span className="ion-ios-clock-outline"></span> 10 min
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div className="card card-blog">
+								<div className="card-img">
+									<a href="/BlogDetails">
+										<img src="images/post-3.jpg" alt="" className="img-fluid" />
+									</a>
+								</div>
+								<div className="card-body">
+									<div className="card-category-box">
+										<div className="card-category">
+											<h6 className="category">Web Design</h6>
+										</div>
+									</div>
+									<h3 className="card-title">
+										<a href="/BlogDetails">See more ideas about Travel</a>
+									</h3>
+									<p className="card-description">
+										Proin eget tortor risus. Pellentesque in ipsum id orci porta
+										dapibus. Praesent sapien massa, convallis a pellentesque
+										nec, egestas non nisi.
+									</p>
+								</div>
+								<div className="card-footer">
+									<div className="post-author">
+										<a href="/BlogDetails">
+											<img
+												src="images/testimonial-2.jpg"
+												alt=""
+												className="avatar rounded-circle"
+											/>
+											<span className="author">Morgan Freeman</span>
+										</a>
+									</div>
+									<div className="post-date">
+										<span className="ion-ios-clock-outline"></span> 10 min
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12">

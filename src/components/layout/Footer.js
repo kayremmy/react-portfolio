@@ -1,5 +1,4 @@
 import React from "react";
-import Loader from "./Loader";
 
 function Footer() {
 	return (
@@ -27,7 +26,6 @@ function Footer() {
 			<a href="/#" className="back-to-top">
 				<i className="fa fa-chevron-up"></i>
 			</a>
-			<Loader />
 		</>
 	);
 }
